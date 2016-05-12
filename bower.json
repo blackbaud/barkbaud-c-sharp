@@ -1,0 +1,7 @@
+{
+  "name": "barkbaud-c-sharp",
+  "private": true,
+  "dependencies": {
+    "barkbaud-ui": "git://github.com/blackbaud/barkbaud-ui.git"
+  }
+}
