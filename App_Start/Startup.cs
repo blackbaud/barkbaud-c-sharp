@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace barkbaud_c_sharp
+namespace Barkbaud
 {
     public class Startup
     {
@@ -18,6 +18,7 @@ namespace barkbaud_c_sharp
             var builder = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")
                 .AddEnvironmentVariables();
+
             Configuration = builder.Build();
         }
 
@@ -47,12 +48,7 @@ namespace barkbaud_c_sharp
 
             app.UseIISPlatformHandler();
             app.UseStaticFiles();
-            app.UseMvc(routes =>
-            {
-                routes.MapRoute(
-                    name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
-            });
+            app.UseMvc(RouteConfig.RegisterRoutes);
         }
 
         // Entry point for the application.

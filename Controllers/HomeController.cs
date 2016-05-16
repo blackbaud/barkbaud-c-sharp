@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 
-namespace barkbaud_c_sharp.Controllers
+namespace Barkbaud.Controllers
 {
     public class HomeController : Controller
     {
